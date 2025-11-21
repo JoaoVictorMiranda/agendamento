@@ -1,0 +1,1 @@
+export const onlyAdmin = (user) => user.role === 'administrador';

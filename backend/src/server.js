@@ -5,6 +5,7 @@ import configurarRotas from './routes/index.js';
 
 dotenv.config();
 const api = express();
+api.use(express.json())
 
 
 configurarRotas(api)
