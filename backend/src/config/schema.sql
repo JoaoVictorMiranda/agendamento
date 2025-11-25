@@ -2,6 +2,14 @@ CREATE DATABASE agendamento;
 
 USE agendamento;
 
+CREATE TABLE admin(
+    id_user INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    senha_hash VARCHAR(255) NOT NULL,
+    role varchar(255)
+);
+
 CREATE TABLE users(
   id_user INT PRIMARY KEY AUTO_INCREMENT,
   nome VARCHAR(255) NOT NULL,

@@ -27,4 +27,17 @@ endpoints.post('/user/cadastro', async (req, res) => {
 });
 
 
+endpoints.post('/user/login', async (req, res) => {
+    const email = req.body.email;
+    const senha = req.body.senha;
+
+    const dados = await repo.loginUsuario(email, senha)
+    const token = generateToken(dados);
+
+    res.send({
+        token: token
+    })
+})
+
+
 export default endpoints

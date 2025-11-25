@@ -46,7 +46,8 @@ export async function loginUsuario(email, senha) {
     }
 
     return {
+        id_user: usuario.id_user,
         nome: usuario.nome,
-        role: usuario.role
+        role: usuario.rol
     };
 }
